@@ -2,6 +2,8 @@
 
 This script is a PHP library for parsing all data files of Weather-Display software, and convert it to an array of parameters. The parser also supports data validation, it allows to test the data of you station, check that the station is on-line.
 
+To parse the METAR information, which also provides the Weather-Display, the library requires a our **METAR/TAF Parser**: https://github.com/hsdn/metar-taf
+
 - Weather-Display software home: http://www.weather-display.com
 
 The parser supports the following data files:
