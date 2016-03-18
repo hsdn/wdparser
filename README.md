@@ -30,6 +30,9 @@ $clientrawdaily = file_get_contents($url.'/clientrawdaily.txt');
 // Create class instance
 $wd = new WeatherDisplay;
 
+// Set station locale set (language) for date parsing
+$wd->locale = 'ru_RU';
+
 // Parse "wdfulldata.xml" file
 $wdfulldata_array = $wd->parse_wdfulldata($wdfulldata);
 
