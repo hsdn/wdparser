@@ -2,7 +2,7 @@
 /**
  * HSDN Weather-Display Parser
  *
- * @version		1.34.0b
+ * @version		1.34.2b
  * @author		HSDN Team
  * @copyright	Copyright (c) 2015, Information Networks Ltd.
  * @link		http://www.hsdn.org
@@ -330,7 +330,7 @@ class WeatherDisplay
 		'yesterday_dew_min_time'		=> array(0, 1),
 		'yesterday_solar_max'			=> array(0, 1),
 		'yesterday_solar_max_time'		=> array(0, 1),
-		'today_temperature_max_'		=> array(0, 1),
+		'today_temperature_max'		=> array(0, 1),
 		'today_temperature_min'			=> array(0, 1),
 		'today_temperature_max_time'	=> array(0, 1),
 		'today_temperature_min_time'	=> array(0, 1),
@@ -528,8 +528,8 @@ class WeatherDisplay
 		'today_rain'					=> 'dayrn',
 		'today_rain_in'					=> 'dayrnusa',
 		'today_rain_mm'					=> 'todayraininmm',
-		'yesterdays_rain'				=> 'ystdyrain',
-		'yesterday_rain'				=> 'yesterdayrain',
+		'yesterday_rain'				=> 'ystdyrain',
+		'yesterday_rain_in'				=> 'yesterdayrain',
 		'yesterday_rain_mm'				=> 'yesterdayrainmm',
 		'month_rain'					=> 'monthrn',
 		'month_rain_mm'					=> 'monthraininmm',
@@ -670,10 +670,10 @@ class WeatherDisplay
 		'yesterday_max_temperature_time'	=> 'maxtempyestt',
 		'yesterday_min_temperature'			=> 'mintempyest',
 		'yesterday_min_temperature_time'	=> 'mintempyestt',
-		'yesterday_max_gust_speed'		=> 'maxgustyest',
-		'yesterday_max_gust_speed_time'	=> 'maxgustyestt',
-		'yesterday_max_average_speed'		=> 'maxaverageyest',
-		'yesterday_max_average_speed_time'	=> 'maxaverageyestt',
+		'yesterday_max_gust_speed'			=> 'maxgustyest',
+		'yesterday_max_gust_speed_time'		=> 'maxgustyestt',
+		'yesterday_max_average_wind_speed'		=> 'maxaverageyest',
+		'yesterday_max_average_wind_speed_time'	=> 'maxaverageyestt',
 		'yesterday_max_barometer'		=> 'maxbaroyest',
 		'yesterday_max_barometer_time'	=> 'maxbaroyestt',
 		'yesterday_min_barometer'		=> 'minbaroyest',
@@ -698,10 +698,10 @@ class WeatherDisplay
 		'yesterday_max_indoor_temperature_time'	=> 'maxindoortempyestt',
 		'yesterday_min_indoor_temperature'		=> 'minindoortempyest',
 		'yesterday_min_indoor_temperature_time'	=> 'minindoortempyestt',
-		'yesterday_day_max_uv'			=> 'highuvyest',
-		'yesterday_day_max_uv_time'		=> 'highuvyesttime',
-		'yesterday_day_min_uv'			=> 'lowuvyest',
-		'yesterday_day_min_uv_time'		=> 'lowuvyesttime',
+		'yesterday_max_uv'			=> 'highuvyest',
+		'yesterday_max_uv_time'		=> 'highuvyesttime',
+		'yesterday_min_uv'			=> 'lowuvyest',
+		'yesterday_min_uv_time'		=> 'lowuvyesttime',
 
 		// Month
 		'month_average_temperature'		=> 'monthtodateavtemp',
@@ -1009,7 +1009,7 @@ class WeatherDisplay
 	 */
 	private function parse_clientraw_fields($content, $fields)
 	{
-		$content = explode(' ', trim($content));
+		$content = preg_split('/\s+/', trim($content));
 		$banner  = end($content);
 
 		if (!preg_match('/^!!.+!!$/', $banner))
