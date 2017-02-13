@@ -2,9 +2,9 @@
 /**
  * HSDN Weather-Display Parser
  *
- * @version		1.34.2b
+ * @version		1.34.3b
  * @author		HSDN Team
- * @copyright	Copyright (c) 2015, Information Networks Ltd.
+ * @copyright	Copyright (c) 2015-2017, Information Networks Ltd.
  * @link		http://www.hsdn.org
  *
  * @compat		with Weather-Display ver. 10.37R build 296
@@ -312,14 +312,14 @@ class WeatherDisplay
 		'yesterday_barometer_min'		=> array(0, 1),
 		'yesterday_barometer_max_time'	=> array(0, 1),
 		'yesterday_barometer_min_time'	=> array(0, 1),
-		'yesterday_max_hum'				=> array(0, 1),
-		'yesterday_min_hum'				=> array(0, 1),
-		'yesterday_max_hum_time'		=> array(0, 1),
-		'yesterday_min_hum_time'		=> array(0, 1),
+		'yesterday_humidity_max'		=> array(0, 1),
+		'yesterday_humidity_min'		=> array(0, 1),
+		'yesterday_humidity_max_time'	=> array(0, 1),
+		'yesterday_humidity_min_time'	=> array(0, 1),
 		'yesterday_gust_speed_max'		=> array(0, 1),
 		'yesterday_gust_speed_max_time'	=> array(0, 1),
-		'yesterday_average_max'			=> array(0, 1),
-		'yesterday_average_max_time'	=> array(0, 1),
+		'yesterday_average_wind_speed_max'		=> array(0, 1),
+		'yesterday_average_wind_speed_max_time'	=> array(0, 1),
 		'yesterday_wind_chill_min'		=> array(0, 1),
 		'yesterday_wind_chill_min_time'	=> array(0, 1),
 		'yesterday_max_heat'			=> array(0, 1),
@@ -330,7 +330,7 @@ class WeatherDisplay
 		'yesterday_dew_min_time'		=> array(0, 1),
 		'yesterday_solar_max'			=> array(0, 1),
 		'yesterday_solar_max_time'		=> array(0, 1),
-		'today_temperature_max'		=> array(0, 1),
+		'today_temperature_max'			=> array(0, 1),
 		'today_temperature_min'			=> array(0, 1),
 		'today_temperature_max_time'	=> array(0, 1),
 		'today_temperature_min_time'	=> array(0, 1),
@@ -338,14 +338,14 @@ class WeatherDisplay
 		'today_barometer_min'			=> array(0, 1),
 		'today_barometer_max_time'		=> array(0, 1),
 		'today_barometer_min_time'		=> array(0, 1),
-		'today_max_hum'					=> array(0, 1),
-		'today_min_hum'					=> array(0, 1),
-		'today_max_hum_time'			=> array(0, 1),
-		'today_min_hum_time'			=> array(0, 1),
+		'today_humidity_max'			=> array(0, 1),
+		'today_humidity_min'			=> array(0, 1),
+		'today_humidity_max_time'		=> array(0, 1),
+		'today_humidity_min_time'		=> array(0, 1),
 		'today_gust_speed_max'			=> array(0, 1),
 		'today_gust_speed_max_time'		=> array(0, 1),
-		'today_average_max'				=> array(0, 1),
-		'today_average_max_time'		=> array(0, 1),
+		'today_average_wind_speed_max'		=> array(0, 1),
+		'today_average_wind_speed_max_time'	=> array(0, 1),
 		'today_wind_chill_min'			=> array(0, 1),
 		'today_wind_chill_min_time'		=> array(0, 1),
 		'today_max_heat'				=> array(0, 1),
