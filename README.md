@@ -73,7 +73,7 @@ $bool = $wd->validate_clientrawhour_fields($clientraw_array, $clientrawhour_arra
 ```
 
 ### Demonstration
-- http://www.hsdn.info/wdparser/
+- http://dev.hsdn.org/wdparser/
 
 ### License
     HSDN Weather-Display Parser
